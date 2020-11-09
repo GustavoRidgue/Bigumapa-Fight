@@ -111,7 +111,7 @@ public class Fighter implements Controller {
 
     public void setAttributes(String name, String nationality, int age, float height, float weight) {
         if (name.length() >= 20 || name.equals("")) {
-            System.out.println("Invalid name");
+            System.out. println("Invalid name");
             this.setName("Put a creative name");
         } else {
             this.setName(name);
@@ -181,11 +181,7 @@ public class Fighter implements Controller {
 
     @Override
     public boolean verifyCombat() {
-        if (this.getElixir() > 0 && this.getHp() > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.getElixir() > 0 && this.getHp() > 0;
     }
 
     @Override
