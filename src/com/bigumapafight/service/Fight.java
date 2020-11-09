@@ -2,9 +2,7 @@ package com.bigumapafight.service;
 
 import com.bigumapafight.controller.Controller;
 
-import javax.xml.soap.SAAJResult;
-
-public class Fighter implements Controller {
+public class Fight implements Controller {
     private String name;
     private String nationality;
     private int age;
@@ -30,7 +28,7 @@ public class Fighter implements Controller {
     private int registration;
     protected static int numbersOfFighters;
 
-    public Fighter(String name, String nationality, int age, float height, float weight, String type) {
+    public Fight(String name, String nationality, int age, float height, float weight, String type) {
         numbersOfFighters++;
         setRegistration(numbersOfFighters);
         this.setAttributes(name, nationality, age, height, weight);
@@ -225,7 +223,7 @@ public class Fighter implements Controller {
     }
 
     @Override
-    public void attack(Fighter targetFighter, int attackType) {
+    public void attack(Fight targetFighter, int attackType) {
         System.out.println("\n---------- FIGHT ! ----------");
 
         if (this.verifyCombat() && targetFighter.verifyCombat() && this.getRegistration() != targetFighter.getRegistration()) {
@@ -371,7 +369,7 @@ public class Fighter implements Controller {
     }
 
     @Override
-    public void cureHp(Fighter fighter, int hpAmount) {
+    public void cureHp(Fight fighter, int hpAmount) {
         if (hpAmount >= this.getElixir()) {
             System.out.println("\n   ---------- " + this.getName().toUpperCase() + " YOU LOSE! (your elixir is over) ----------   \n");
             this.winCombat();

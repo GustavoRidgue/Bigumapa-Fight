@@ -1,6 +1,6 @@
 package com.bigumapafight.controller;
 
-import com.bigumapafight.service.Fighter;
+import com.bigumapafight.service.Fight;
 
 public interface Controller {
     public abstract void introduceYourself();
@@ -12,8 +12,8 @@ public interface Controller {
     public abstract void packLife();
     public abstract void packAttack();
     public abstract void packElixir();
-    public abstract void attack(Fighter targetFighter, int attackType);
-    public abstract void cureHp(Fighter fighter, int hpAmount);
+    public abstract void attack(Fight targetFighter, int attackType);
+    public abstract void cureHp(Fight fighter, int hpAmount);
     public abstract void winCombat();
     public abstract void tieCombat();
     public abstract void loseCombat();

@@ -3,12 +3,12 @@ package com.bigumapafight.service;
 import java.util.Random;
 
 public class AutomaticFight {
-    private Fighter challenger;
-    private Fighter challenged;
+    private Fight challenger;
+    private Fight challenged;
     private int rounds;
     private boolean canFight;
 
-    public void markFight(Fighter fighterChallenger, Fighter fighterChallenged) {
+    public void markFight(Fight fighterChallenger, Fight fighterChallenged) {
         if (fighterChallenger.getCategory().equals(fighterChallenged.getCategory()) &&
                 fighterChallenged != fighterChallenger) {
             this.canFight = true;
@@ -53,19 +53,19 @@ public class AutomaticFight {
         }
     }
 
-    public Fighter getChallenger() {
+    public Fight getChallenger() {
         return challenger;
     }
 
-    public void setChallenger(Fighter challenger) {
+    public void setChallenger(Fight challenger) {
         this.challenger = challenger;
     }
 
-    public Fighter getChallenged() {
+    public Fight getChallenged() {
         return challenged;
     }
 
-    public void setChallenged(Fighter challenged) {
+    public void setChallenged(Fight challenged) {
         this.challenged = challenged;
     }
 

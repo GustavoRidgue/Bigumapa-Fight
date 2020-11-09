@@ -1,39 +1,44 @@
 package com.bigumapafight;
 
-import com.bigumapafight.service.Fighter;
+import com.bigumapafight.bluefighters.Archer;
+import com.bigumapafight.progenitor.Fighter;
+import com.bigumapafight.service.Fight;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("");
-        Fighter fighter[] = new Fighter[10];
+        Archer gustavo =
+                new Archer("Gustavo");
 
-        Fighter gustavo =
-                new Fighter("Gustavo", "American", 15, 1.73f, 42.50f, "Attacker");
+        Archer biel =
+                new Archer("Gabriel");
 
-        Fighter marineide =
-                new Fighter("Marineide", "France", 45, 1.80f, 66.53f, "Curator");
+        Archer arnaldo =
+                new Archer("Arnaldo");
 
-        Fighter arnaldo =
-                new Fighter("Arnaldo", "Egyptian", 47, 1.70f, 104.53f, "Tanker");
+        gustavo.specialAttack(biel, arnaldo);
+        gustavo.status();
 
-        Fighter biel =
-                new Fighter("Biel", "Canadian", 21, 1.80f, 74.53f, "Assistant");
-
-        //gustavo.attackStatus();
-        //arnaldo.attackStatus();
-        //biel.attackStatus();
-        //marineide.attackStatus();
-//
-        //gustavo.status();
-        //arnaldo.status();
-        //biel.status();
-        //marineide.status();
-
-        gustavo.attack(marineide, 4);
-        biel.attack(gustavo, 4);
-        arnaldo.attack(marineide, 4);
+        gustavo.attack4(biel);
+        gustavo.attack3(biel);
+        gustavo.attack2(biel);
+        gustavo.attack1(biel);
+        gustavo.attack1(biel);
+        gustavo.attack1(biel);
+        gustavo.attack1(biel);
+        gustavo.attack1(biel);
+        gustavo.attack4(biel);
+        gustavo.attack4(biel);
+        gustavo.attack4(biel);
 
 
+        System.out.println("o");
+
+
+        //public abstract void specialAttack(Fighter targetFighter, Fighter targetFighter2);
+        //public abstract void specialAttack(Fighter targetFighter, Fighter teamFighter);
+        //public abstract void specialAttack(Fighter targetFighter, Fighter targetFighter2, Fighter targetFighter3);
+        //public abstract void specialAttack(Fighter teamFighter, Fighter teamFighter2, Fighter teamFighter3);
+        //public abstract void specialAttack(Fighter teamFighter, Fighter teamFighter2);    public void specialAttack(Fighter targetFighter) {
     }
 }
