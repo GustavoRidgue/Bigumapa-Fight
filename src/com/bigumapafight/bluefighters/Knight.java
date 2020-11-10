@@ -28,15 +28,6 @@ public class Knight extends BlueFighter {
         this.setLegendaryAttackElixir(600);
     }
 
-    @Override
-    public void status() {
-        System.out.println(
-                "\n----- Status of " + this.getName() + " -----\n" +
-                        "HP: " + this.getHp() + " | Elixir: " + this.getElixir() +
-                        "\n-----------------------"
-        );
-    }
-
     public void specialAttack(Fighter targetFighter, Fighter targetFighter2) {
         System.out.println("---------- FIGHT! ----------");
         if (this.verifyCombat() && targetFighter.verifyCombat() && targetFighter2.verifyCombat()) {

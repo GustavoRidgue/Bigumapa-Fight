@@ -1,7 +1,6 @@
 package com.bigumapafight;
 
 import com.bigumapafight.bluefighters.Archer;
-import com.bigumapafight.anotations.service.Fight;
 
 public class Main {
 
@@ -26,8 +25,6 @@ public class Main {
         gustavo.attack4(biel);
         gustavo.attack4(biel);
         gustavo.attack4(biel);
-
-        System.out.println("o");
 
 
         //public abstract void specialAttack(Fighter targetFighter, Fighter targetFighter2);

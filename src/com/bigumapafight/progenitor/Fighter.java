@@ -36,7 +36,13 @@ public abstract class Fighter {
                 "Legendary attack: " + this.getLegendaryAttack() + " | Elixir: " + this.getLegendaryAttackElixir() + "\n" +
                 "--------------------------");
     }
-    public abstract void status();
+    public void status(){
+        System.out.println(
+                "\n----- Status of " + this.getName() + " -----\n" +
+                "HP: " + this.getHp() + " | Elixir: " + this.getElixir() +
+                "\n-----------------------"
+        );
+    };
     public void attackStatus() {
         System.out.println(
                 "\n----- Attack statistics of " + this.name + " (Actual elixir " + this.getElixir() + ") -----\n" +
