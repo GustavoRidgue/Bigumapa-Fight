@@ -1,4 +1,4 @@
-package com.bigumapafight.service;
+package com.bigumapafight.anotations.service;
 
 import java.util.Random;
 

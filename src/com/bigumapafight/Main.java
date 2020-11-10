@@ -1,20 +1,16 @@
 package com.bigumapafight;
 
 import com.bigumapafight.bluefighters.Archer;
-import com.bigumapafight.progenitor.Fighter;
-import com.bigumapafight.service.Fight;
+import com.bigumapafight.anotations.service.Fight;
 
 public class Main {
 
     public static void main(String[] args) {
-        Archer gustavo =
-                new Archer("Gustavo");
+        Archer gustavo = new Archer("Gustavo");
 
-        Archer biel =
-                new Archer("Gabriel");
+        Archer biel = new Archer("Gabriel");
 
-        Archer arnaldo =
-                new Archer("Arnaldo");
+        Archer arnaldo = new Archer("Arnaldo");
 
         gustavo.specialAttack(biel, arnaldo);
         gustavo.status();
@@ -30,7 +26,6 @@ public class Main {
         gustavo.attack4(biel);
         gustavo.attack4(biel);
         gustavo.attack4(biel);
-
 
         System.out.println("o");
 

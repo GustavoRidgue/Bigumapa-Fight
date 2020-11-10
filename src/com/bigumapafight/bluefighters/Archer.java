@@ -1,7 +1,6 @@
 package com.bigumapafight.bluefighters;
 
 import com.bigumapafight.progenitor.Fighter;
-import com.bigumapafight.service.Fight;
 
 public class Archer extends BlueFighter {
 
