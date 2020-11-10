@@ -12,8 +12,7 @@ public class Main {
 
         Knight arnaldo = new Knight("Arnaldo");
 
-        gustavo.status();
-        biel.specialAttack(gustavo);
+        gustavo.introduceYourself();
 
         //public abstract void specialAttack(Fighter targetFighter, Fighter targetFighter2);
         //public abstract void specialAttack(Fighter targetFighter, Fighter teamFighter);
