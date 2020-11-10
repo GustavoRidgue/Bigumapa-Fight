@@ -1,31 +1,19 @@
 package com.bigumapafight;
 
 import com.bigumapafight.bluefighters.Archer;
+import com.bigumapafight.bluefighters.Knight;
 
 public class Main {
 
     public static void main(String[] args) {
         Archer gustavo = new Archer("Gustavo");
 
-        Archer biel = new Archer("Gabriel");
+        Knight biel = new Knight("Gabriel");
 
-        Archer arnaldo = new Archer("Arnaldo");
+        Knight arnaldo = new Knight("Arnaldo");
 
-        gustavo.specialAttack(biel, arnaldo);
         gustavo.status();
-
-        gustavo.attack4(biel);
-        gustavo.attack3(biel);
-        gustavo.attack2(biel);
-        gustavo.attack1(biel);
-        gustavo.attack1(biel);
-        gustavo.attack1(biel);
-        gustavo.attack1(biel);
-        gustavo.attack1(biel);
-        gustavo.attack4(biel);
-        gustavo.attack4(biel);
-        gustavo.attack4(biel);
-
+        biel.specialAttack(gustavo);
 
         //public abstract void specialAttack(Fighter targetFighter, Fighter targetFighter2);
         //public abstract void specialAttack(Fighter targetFighter, Fighter teamFighter);
