@@ -28,7 +28,7 @@ public class Knight extends BlueFighter {
         this.setLegendaryAttackElixir(600);
     }
 
-    public void specialAttack(Fighter targetFighter) {
+    public void specialMegaAttack(Fighter targetFighter) {
         if (this.verifyCombat() && targetFighter.verifyCombat()) {
             this.elixir -= (this.getLegendaryAttackElixir() + this.getCommonAttackElixir());
 
@@ -39,7 +39,7 @@ public class Knight extends BlueFighter {
                         this.getName() + "= HP: " + this.getHp() + " | Elixir: " + (this.getElixir() + (this.getLegendaryAttackElixir() + this.getCommonAttackElixir())) + "\n" +
                         targetFighter.getName() + "= HP: " + targetFighter.getHp() + " | Elixir: " + targetFighter.getElixir());
 
-                targetFighter.hp -= (this.getLegendaryAttack() + this.getMediumAttack());
+                targetFighter.setHp(targetFighter.getHp() - (this.getLegendaryAttack() + this.getMediumAttack()));
 
                 System.out.println("\nNew Status: \n" +
                         this.getName() + "= HP: " + this.getHp() + " | Elixir: " + this.getElixir() +

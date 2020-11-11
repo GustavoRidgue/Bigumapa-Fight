@@ -6,7 +6,7 @@ public abstract class Fighter {
     protected String team;
 
     protected int elixir;
-    public int hp;
+    protected int hp;
 
     protected int commonAttack;
     protected int commonAttackElixir;
@@ -216,6 +216,26 @@ public abstract class Fighter {
                     "\n---------- FIGHT ENDED! ----------\n");
         }
     }
+    public void cureHp(int hpAmount) {
+        if (hpAmount >= this.getElixir()) {
+            System.out.println("\n   ---------- " + this.getName().toUpperCase() + " YOU LOSE! (your elixir is over) ----------   \n");
+            this.loseCombat();
+        }
+        else if (!this.verifyCombat()) {
+            System.out.println(this.name + " can't cure because " + this.name + " already lose");
+        } else {
+            System.out.println("\n------ " + this.name + " cure " + hpAmount + " HP" + " ------\n" +
+                    "Old statistics: \n" +
+                    "Name: " + this.name + " | HP: " + this.hp + " | Elixir: " + this.elixir + "\n");
+
+            this.elixir -= hpAmount;
+            this.hp += hpAmount;
+
+            System.out.println("New statistics: \n" +
+                    "Name: " + this.name + " | HP: " + this.hp + " | Elixir: " + this.elixir +
+                    "\n--------------------\n");
+        }
+    }
     public void cureHp(Fighter fighter, int hpAmount) {
         if (hpAmount >= this.getElixir()) {
             System.out.println("\n   ---------- " + this.getName().toUpperCase() + " YOU LOSE! (your elixir is over) ----------   \n");
@@ -238,26 +258,7 @@ public abstract class Fighter {
                     "\n--------------------\n");
         }
     }
-    public void cureHp(int hpAmount) {
-        if (hpAmount >= this.getElixir()) {
-            System.out.println("\n   ---------- " + this.getName().toUpperCase() + " YOU LOSE! (your elixir is over) ----------   \n");
-            this.loseCombat();
-        }
-        else if (!this.verifyCombat()) {
-            System.out.println(this.name + " can't cure because " + this.name + " already lose");
-        } else {
-            System.out.println("\n------ " + this.name + " cure " + hpAmount + " HP" + " ------\n" +
-                    "Old statistics: \n" +
-                    "Name: " + this.name + " | HP: " + this.hp + " | Elixir: " + this.elixir + "\n");
 
-            this.elixir -= hpAmount;
-            this.hp += hpAmount;
-
-            System.out.println("New statistics: \n" +
-                    "Name: " + this.name + " | HP: " + this.hp + " | Elixir: " + this.elixir +
-                    "\n--------------------\n");
-        }
-    }
 
     public String getName() {
         return name;
