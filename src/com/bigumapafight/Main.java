@@ -1,9 +1,6 @@
 package com.bigumapafight;
 
-import com.bigumapafight.bluefighters.Archer;
-import com.bigumapafight.bluefighters.Healer;
-import com.bigumapafight.bluefighters.Knight;
-import com.bigumapafight.bluefighters.Warrior;
+import com.bigumapafight.bluefighters.*;
 
 public class Main {
 
@@ -12,8 +9,9 @@ public class Main {
         Knight biel = new Knight("Gabriel");
         Healer arnaldo = new Healer("Arnaldo");
         Warrior marineide = new Warrior("Marineide");
+        Wizard eduardo = new Wizard("Eduardo");
 
-        
+        eduardo.specialAttackAndCure(gustavo, biel);
 
         //public abstract void specialAttack(Fighter targetFighter, Fighter targetFighter2);
         //public abstract void specialAttack(Fighter targetFighter, Fighter teamFighter);

@@ -12,7 +12,7 @@ public class Healer extends BlueFighter {
         this.setCategory("Healer");
 
         this.setHp(2500);
-        this.setElixir(8000);
+        this.setElixir(10000);
 
         this.setCommonAttack(100);
         this.setCommonAttackElixir(100);
