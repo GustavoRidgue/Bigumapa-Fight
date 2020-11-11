@@ -27,7 +27,7 @@ public class Healer extends BlueFighter {
         this.setLegendaryAttackElixir(400);
     }
 
-    public void specialCureHp500(Fighter fighter, Fighter fighter2) {
+    public void specialCureHp300(Fighter fighter, Fighter fighter2) {
         if (800 >= this.getElixir()) {
             System.out.println("\n   ---------- " + this.getName().toUpperCase() + " YOU LOSE! (your elixir is over) ----------   \n");
             this.loseCombat();
@@ -47,9 +47,9 @@ public class Healer extends BlueFighter {
             this.setElixir(this.getElixir() - 800);
 
             System.out.println("New statistics: \n" +
-                    "Name: " + this.getName() + " | HP: " + this.getHp() + " | Elixir: " + this.getElixir() + "\n" +
-                    "Name: " + fighter.getName() + " | HP: " + fighter.getHp() + " | Elixir: " + fighter.getElixir() + "\n" +
-                    "Name: " + fighter2.getName() + " | HP: " + fighter2.getHp() + " | Elixir: " + fighter2.getElixir() +
+                    "Name: " + this.getName() + " | HP: " + this.getHp() + " | Elixir: " + this.getElixir() + " (Lost 800 Elixir and received 300 HP)" + "\n" +
+                    "Name: " + fighter.getName() + " | HP: " + fighter.getHp() + " | Elixir: " + fighter.getElixir() + " (Received 300 HP)" + "\n" +
+                    "Name: " + fighter2.getName() + " | HP: " + fighter2.getHp() + " | Elixir: " + fighter2.getElixir() + " (Received 300 HP)" +
                     "\n--------------------\n");
         }
     }

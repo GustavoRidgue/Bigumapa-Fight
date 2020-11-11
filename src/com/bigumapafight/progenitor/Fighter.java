@@ -253,8 +253,8 @@ public abstract class Fighter {
             this.elixir -= hpAmount;
 
             System.out.println("New statistics: \n" +
-                    "Name: " + this.name + " | HP: " + this.hp + " | Elixir: " + this.elixir +
-                    "Name: " + fighter.name + " | HP: " + fighter.hp + " | Elixir: " + fighter.elixir +
+                    "Name: " + this.name + " | HP: " + this.hp + " | Elixir: " + this.elixir + " (Lost " + hpAmount + " Elixir) \n" +
+                    "Name: " + fighter.name + " | HP: " + fighter.hp + " | Elixir: " + fighter.elixir + " (Receive " + hpAmount + " Hp) \n" +
                     "\n--------------------\n");
         }
     }

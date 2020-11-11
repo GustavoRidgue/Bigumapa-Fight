@@ -48,7 +48,7 @@ public class Wizard extends BlueFighter{
 
 
                 if (!this.verifyCombat() || !teamFighter.verifyCombat()) {
-                    System.out.println(this.name + " can't cure " + teamFighter.getName() + " because " + this.name + " and/or " + this.name + " already lose");
+                    System.out.println(this.getName() + " can't cure " + teamFighter.getName() + " because " + this.name + " and/or " + this.name + " already lose");
                 } else {
                     this.setElixir(this.getElixir() - 600);
 
