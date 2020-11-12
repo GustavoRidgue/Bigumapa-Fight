@@ -23,6 +23,52 @@ public class Main {
         archerRed.cureHp(healerRed, 800);
 
         archerBlue.specialAttackThreeFighters(healerRed, archerRed, knightRed);
+        healerRed.specialCureHp300(healerRed, archerRed);
+
+        warriorBlue.specialMegaAttack(archerRed);
+        knightRed.cureHp(archerRed, 800);
+
+        wizardBlue.specialAttackAndCure(archerRed, archerBlue);
+        archerRed.specialAttackThreeFighters(archerBlue, warriorBlue, wizardBlue);
+
+        archerBlue.specialAttackThreeFighters(archerRed, knightRed, healerRed);
+        healerRed.specialCureHp300(archerRed, healerRed);
+
+        warriorBlue.specialMegaAttack(archerRed);
+        knightRed.cureHp(archerRed, 1000);
+
+        wizardBlue.specialAttackAndCure(archerRed, archerBlue);
+        archerRed.specialAttackThreeFighters(archerBlue, warriorBlue, wizardBlue);
+
+        archerBlue.specialAttackThreeFighters(archerRed, knightRed, healerRed);
+        healerRed.specialCureHp300(archerRed, healerRed);
+
+        warriorBlue.specialMegaAttack(archerRed);
+        knightRed.cureHp(archerRed, 1500);
+
+        wizardBlue.specialAttackAndCure(archerRed, archerBlue);
+        archerRed.specialAttackThreeFighters(archerBlue, warriorBlue, wizardBlue);
+
+        archerBlue.specialAttackThreeFighters(archerRed, knightRed, healerRed);
+        healerRed.specialCureHp300(archerRed, healerRed);
+
+        warriorBlue.attack4(archerRed);
+        archerRed.cureHp(1000);
+
+        wizardBlue.specialAttackAndCure(archerRed, archerBlue);
+        archerRed.specialAttackThreeFighters(warriorBlue, archerBlue, wizardBlue);
+
+        archerBlue.specialAttackThreeFighters(healerRed, archerRed, knightRed);
+        healerRed.specialCureHp300(archerRed, archerRed);
+
+        warriorBlue.cureHp(archerBlue, 150);
+        archerRed.specialAttackThreeFighters(archerBlue, warriorBlue, wizardBlue);
+
+        wizardBlue.specialAttackAndCure(archerRed, archerBlue);
+        archerRed.specialAttackThreeFighters(archerBlue, archerBlue, archerBlue);
+
+        archerBlue.attack4(healerRed);
+        knightRed.status();
 
         //public abstract void specialAttack(Fighter targetFighter, Fighter targetFighter2);
         //public abstract void specialAttack(Fighter targetFighter, Fighter teamFighter);
