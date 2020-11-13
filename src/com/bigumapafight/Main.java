@@ -70,6 +70,18 @@ public class Main {
         archerBlue.attack4(healerRed);
         knightRed.status();
 
+        /*
+        Blue team:
+        put Paladin, Centaur, Gladiator, Guardian, Goliath, Elementary
+        Remove Archer, Warrior;
+        */
+
+        /*
+        Red team:
+        Put Giant, Werewolf, StealEnergy, Ogre, Troll, Minotaur;
+        Remove Assassin, Thief;
+        */
+
         //public abstract void specialAttack(Fighter targetFighter, Fighter targetFighter2);
         //public abstract void specialAttack(Fighter targetFighter, Fighter teamFighter);
         //public abstract void specialAttack(Fighter targetFighter, Fighter targetFighter2, Fighter targetFighter3);
