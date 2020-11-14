@@ -27,8 +27,8 @@ public class Wizard extends BlueFighter{
         this.setLegendaryAttackElixir(800);
     }
 
-    public void specialAttackAndCure(Fighter targetFighter, Fighter teamFighter) {
-        if (this.verifyCombat() && targetFighter.verifyCombat() && teamFighter.verifyCombat()) {
+    public void specialAttackAndCure(Fighter targetFighter, Fighter teamFighter, Fighter teamFighter2) {
+        if (this.verifyCombat() && targetFighter.verifyCombat() && teamFighter.verifyCombat() && teamFighter2.verifyCombat()) {
             this.elixir -= this.getMediumAttackElixir();
 
             if (this.verifyCombat()) {
@@ -47,24 +47,29 @@ public class Wizard extends BlueFighter{
                         " (lost " + this.getMediumAttack() + " hp)");
 
 
-                if (!this.verifyCombat() || !teamFighter.verifyCombat()) {
-                    System.out.println(this.getName() + " can't cure " + teamFighter.getName() + " because " + this.name + " and/or " + this.name + " already lose");
+                if (!this.verifyCombat() || !teamFighter.verifyCombat() || !teamFighter2.verifyCombat()) {
+                    System.out.println(this.getName() + " can't cure/give elixir to " + teamFighter.getName() + " and/or " + teamFighter2.getName() + " because someone already lose");
+                    teamFighter.status();
+                    teamFighter2.status();
                 } else {
                     this.setElixir(this.getElixir() - 600);
 
                     if (this.verifyCombat()) {
                         System.out.println(
-                                "\n------ " + this.getName() + " cure 300 HP" + " ------\n" +
+                                "\n------ " + this.getName() + " cure 300 HP and Give elixir" + " ------\n" +
                                         "Old statistics: \n" +
                                         "Name: " + this.getName() + " | HP: " + this.getHp() + " | Elixir: " + (this.getElixir() + 600) + "\n" +
-                                        "Name: " + teamFighter.getName() + " | HP: " + teamFighter.getHp() + " | Elixir: " + teamFighter.getElixir() + "\n");
+                                        "Name: " + teamFighter.getName() + " | HP: " + teamFighter.getHp() + " | Elixir: " + teamFighter.getElixir() + "\n" +
+                                        "Name: " + teamFighter2.getName() + " | HP: " + teamFighter2.getHp() + " | Elixir: " + teamFighter2.getElixir() + "\n");
 
                         this.setHp(this.getHp() + 300);
                         teamFighter.setHp(teamFighter.getHp() + 300);
+                        teamFighter2.setElixir(teamFighter2.getElixir() + 300);
 
                         System.out.println("New statistics: \n" +
                                 "Name: " + this.getName() + " | HP: " + this.getHp() + " | Elixir: " + this.getElixir() + " (Lost 600 Elixir and received 300 HP)" + "\n" +
-                                "Name: " + teamFighter.getName() + " | HP: " + teamFighter.getHp() + " | Elixir: " + teamFighter.getElixir() + " (Received 300 HP)" +
+                                "Name: " + teamFighter.getName() + " | HP: " + teamFighter.getHp() + " | Elixir: " + teamFighter.getElixir() + " (Received 300 HP)" + "\n" +
+                                "Name: " + teamFighter2.getName() + " | HP: " + teamFighter2.getHp() + " | Elixir: " + teamFighter2.getElixir() + " (Received 300 Elixir)" +
                                 "\n---------- FIGHT ENDED ----------\n");
                     } else {
                         System.out.println(

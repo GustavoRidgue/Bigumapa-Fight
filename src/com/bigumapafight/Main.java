@@ -13,62 +13,6 @@ public class Main {
         Knight knightRed = new Knight("knightRed");
         Guardian archerRed = new Guardian("archerRed");
 
-        guardianBlue.specialAttackThreeFighters(paladinRed, knightRed, archerRed);
-        paladinRed.specialCureHp300(paladinRed, archerRed);
-
-        gladiatorBlue.specialMegaAttack(paladinRed);
-        knightRed.specialAttackTwoFighters(guardianBlue, gladiatorBlue);
-
-        wizardBlue.specialAttackAndCure(paladinRed, guardianBlue);
-        archerRed.cureHp(paladinRed, 800);
-
-        guardianBlue.specialAttackThreeFighters(paladinRed, archerRed, knightRed);
-        paladinRed.specialCureHp300(paladinRed, archerRed);
-
-        gladiatorBlue.specialMegaAttack(archerRed);
-        knightRed.cureHp(archerRed, 800);
-
-        wizardBlue.specialAttackAndCure(archerRed, guardianBlue);
-        archerRed.specialAttackThreeFighters(guardianBlue, gladiatorBlue, wizardBlue);
-
-        guardianBlue.specialAttackThreeFighters(archerRed, knightRed, paladinRed);
-        paladinRed.specialCureHp300(archerRed, paladinRed);
-
-        gladiatorBlue.specialMegaAttack(archerRed);
-        knightRed.cureHp(archerRed, 1000);
-
-        wizardBlue.specialAttackAndCure(archerRed, guardianBlue);
-        archerRed.specialAttackThreeFighters(guardianBlue, gladiatorBlue, wizardBlue);
-
-        guardianBlue.specialAttackThreeFighters(archerRed, knightRed, paladinRed);
-        paladinRed.specialCureHp300(archerRed, paladinRed);
-
-        gladiatorBlue.specialMegaAttack(archerRed);
-        knightRed.cureHp(archerRed, 1500);
-
-        wizardBlue.specialAttackAndCure(archerRed, guardianBlue);
-        archerRed.specialAttackThreeFighters(guardianBlue, gladiatorBlue, wizardBlue);
-
-        guardianBlue.specialAttackThreeFighters(archerRed, knightRed, paladinRed);
-        paladinRed.specialCureHp300(archerRed, paladinRed);
-
-        gladiatorBlue.attack4(archerRed);
-        archerRed.cureHp(1000);
-
-        wizardBlue.specialAttackAndCure(archerRed, guardianBlue);
-        archerRed.specialAttackThreeFighters(gladiatorBlue, guardianBlue, wizardBlue);
-
-        guardianBlue.specialAttackThreeFighters(paladinRed, archerRed, knightRed);
-        paladinRed.specialCureHp300(archerRed, archerRed);
-
-        gladiatorBlue.cureHp(guardianBlue, 150);
-        archerRed.specialAttackThreeFighters(guardianBlue, gladiatorBlue, wizardBlue);
-
-        wizardBlue.specialAttackAndCure(archerRed, guardianBlue);
-        archerRed.specialAttackThreeFighters(guardianBlue, guardianBlue, guardianBlue);
-
-        guardianBlue.attack4(paladinRed);
-        knightRed.status();
 
 //        Archer;        Guardian;  (Tank)
 //        Healer;        Paladin;   (Tank)
