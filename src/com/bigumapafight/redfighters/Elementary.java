@@ -98,7 +98,7 @@ public class Elementary extends RedFighter {
             this.status();
             targetFighter.status();
             System.out.println(this.getName() + " and/or " + targetFighter.getName() + " already lose" +
-                    "\n---------- FIGHT ENDED! ----------\n");
+                    "\n ---------- FIGHT ENDED! ---------- \n");
         }
     }
 }

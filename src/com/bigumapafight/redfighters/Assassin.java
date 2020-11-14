@@ -68,7 +68,7 @@ public class Assassin extends RedFighter {
                         this.getName() + "= HP: " + this.getHp() + " | Elixir: " + this.getElixir());
                 System.out.println(this.getName() + " YOU LOSE! (your elixir is over)");
                 this.loseCombat();
-                System.out.println("\n---------- FIGHT ENDED! ----------\n");
+                System.out.println("\n ---------- FIGHT ENDED! ---------- \n");
             }
         }
     }
