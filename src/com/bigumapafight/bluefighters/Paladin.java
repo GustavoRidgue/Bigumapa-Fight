@@ -2,17 +2,17 @@ package com.bigumapafight.bluefighters;
 
 import com.bigumapafight.progenitor.Fighter;
 
-public class Healer extends BlueFighter {
-    public Healer(String name) {
+public class Paladin extends BlueFighter {
+    public Paladin(String name) {
         super(name);
     }
 
     @Override
     public void setSkills() {
-        this.setCategory("Healer");
+        this.setCategory("Paladin");
 
-        this.setHp(2500);
-        this.setElixir(10000);
+        this.setHp(7000);
+        this.setElixir(6000);
 
         this.setCommonAttack(100);
         this.setCommonAttackElixir(100);

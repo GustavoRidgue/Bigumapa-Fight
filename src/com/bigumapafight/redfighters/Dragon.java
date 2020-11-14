@@ -10,7 +10,7 @@ public class Dragon extends RedFighter {
         this.setCategory("Dragon");
 
         this.setHp(7000);
-        this.setElixir(5000);
+        this.setElixir(6000);
 
         this.setCommonAttack(200);
         this.setCommonAttackElixir(200);

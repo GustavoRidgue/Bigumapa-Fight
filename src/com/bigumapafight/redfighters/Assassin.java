@@ -7,7 +7,7 @@ public class Assassin extends RedFighter {
 
     @Override
     public void setSkills() {
-        this.setCategory("Healer");
+        this.setCategory("Assassin");
 
         this.setHp(3000);
         this.setElixir(6000);

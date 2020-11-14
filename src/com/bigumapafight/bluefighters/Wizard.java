@@ -14,16 +14,16 @@ public class Wizard extends BlueFighter{
         this.setHp(3000);
         this.setElixir(8000);
 
-        this.setCommonAttack(150);
+        this.setCommonAttack(100);
         this.setCommonAttackElixir(200);
 
-        this.setMediumAttack(350);
+        this.setMediumAttack(300);
         this.setMediumAttackElixir(400);
 
-        this.setSuperAttack(550);
+        this.setSuperAttack(500);
         this.setSuperAttackElixir(600);
 
-        this.setLegendaryAttack(750);
+        this.setLegendaryAttack(700);
         this.setLegendaryAttackElixir(800);
     }
 

@@ -1,15 +1,15 @@
 package com.bigumapafight.redfighters;
 
-public class Viking extends RedFighter {
-    public Viking(String name) {
+public class Giant extends RedFighter {
+    public Giant(String name) {
         super(name);
     }
 
     @Override
     public void setSkills() {
-        this.setCategory("Viking");
+        this.setCategory("Giant");
 
-        this.setHp(5000);
+        this.setHp(8000);
         this.setElixir(5000);
 
         this.setCommonAttack(200);
@@ -24,6 +24,4 @@ public class Viking extends RedFighter {
         this.setLegendaryAttack(800);
         this.setLegendaryAttackElixir(800);
     }
-
-    //attack 2 fighters
 }

@@ -2,30 +2,30 @@ package com.bigumapafight.bluefighters;
 
 import com.bigumapafight.progenitor.Fighter;
 
-public class Archer extends BlueFighter {
+public class Guardian extends BlueFighter {
 
-    public Archer(String name) {
+    public Guardian(String name) {
         super(name);
     }
 
     @Override
     public void setSkills() {
-        this.setCategory("Archer");
+        this.setCategory("Guardian");
 
-        this.setHp(3000);
-        this.setElixir(7000);
+        this.setHp(8000);
+        this.setElixir(5000);
 
-        this.setCommonAttack(100);
-        this.setCommonAttackElixir(100);
+        this.setCommonAttack(200);
+        this.setCommonAttackElixir(200);
 
-        this.setMediumAttack(200);
-        this.setMediumAttackElixir(200);
+        this.setMediumAttack(400);
+        this.setMediumAttackElixir(400);
 
-        this.setSuperAttack(400);
-        this.setSuperAttackElixir(400);
+        this.setSuperAttack(600);
+        this.setSuperAttackElixir(600);
 
-        this.setLegendaryAttack(600);
-        this.setLegendaryAttackElixir(600);
+        this.setLegendaryAttack(800);
+        this.setLegendaryAttackElixir(800);
     }
 
     public void specialAttackThreeFighters(Fighter targetFighter, Fighter targetFighter2, Fighter targetFighter3) {
