@@ -14,25 +14,25 @@ public class Paladin extends BlueFighter {
         this.setHp(7000);
         this.setElixir(6000);
 
-        this.setCommonAttack(100);
-        this.setCommonAttackElixir(100);
+        this.setCommonAttack(200);
+        this.setCommonAttackElixir(200);
 
-        this.setMediumAttack(200);
-        this.setMediumAttackElixir(200);
+        this.setMediumAttack(400);
+        this.setMediumAttackElixir(400);
 
-        this.setSuperAttack(300);
-        this.setSuperAttackElixir(300);
+        this.setSuperAttack(600);
+        this.setSuperAttackElixir(600);
 
-        this.setLegendaryAttack(400);
-        this.setLegendaryAttackElixir(400);
+        this.setLegendaryAttack(800);
+        this.setLegendaryAttackElixir(800);
     }
 
     public void specialAttackThreeFighters(Fighter targetFighter, Fighter targetFighter2, Fighter targetFighter3) {
         System.out.println("---------- FIGHT! ----------");
         if (this.verifyCombat() && targetFighter.verifyCombat() && targetFighter2.verifyCombat()) {
 
-            int newAttack = this.getMediumAttack() + this.getMediumAttack();
-            int newElixir = this.getSuperAttackElixir() + this.getLegendaryAttackElixir();
+            int newAttack = this.getMediumAttack();
+            int newElixir = this.getCommonAttackElixir() + this.getLegendaryAttackElixir();
             this.setElixir(this.getElixir() - newElixir);
 
             if (this.verifyCombat()) {

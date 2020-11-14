@@ -29,7 +29,7 @@ public class Wizard extends BlueFighter{
 
     public void specialAttackAndCure(Fighter targetFighter, Fighter teamFighter, Fighter teamFighter2) {
         if (this.verifyCombat() && targetFighter.verifyCombat() && teamFighter.verifyCombat() && teamFighter2.verifyCombat()) {
-            this.elixir -= this.getMediumAttackElixir();
+            this.setElixir(this.getElixir() - (this.getSpecialAttackElixir() + this.getMediumAttackElixir()));
 
             if (this.verifyCombat()) {
                 System.out.println("---------- FIGHT! ----------\n" +

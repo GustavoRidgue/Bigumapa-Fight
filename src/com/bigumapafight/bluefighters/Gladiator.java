@@ -29,7 +29,7 @@ public class Gladiator extends BlueFighter{
 
     public void specialMegaAttack(Fighter targetFighter) {
         if (this.verifyCombat() && targetFighter.verifyCombat()) {
-            this.elixir -= (this.getLegendaryAttackElixir() + this.getCommonAttackElixir());
+            this.setElixir(this.getElixir() - (this.getLegendaryAttackElixir() + this.getCommonAttackElixir()));
 
             if (this.verifyCombat()) {
                 System.out.println("---------- FIGHT! ----------\n" +
