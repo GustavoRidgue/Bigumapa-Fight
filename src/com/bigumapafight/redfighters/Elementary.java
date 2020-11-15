@@ -11,8 +11,8 @@ public class Elementary extends RedFighter {
     public void setSkills() {
         this.setCategory("Elementary");
 
-        this.setHp(4000);
-        this.setElixir(6000);
+        this.setHp(4500);
+        this.setElixir(6500);
 
         this.setCommonAttack(150);
         this.setCommonAttackElixir(150);

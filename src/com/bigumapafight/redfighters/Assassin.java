@@ -12,7 +12,7 @@ public class Assassin extends RedFighter {
         this.setCategory("Assassin");
 
         this.setHp(3000);
-        this.setElixir(6000);
+        this.setElixir(6500);
 
         this.setCommonAttack(300);
         this.setCommonAttackElixir(300);

@@ -78,7 +78,7 @@ public class Main {
 
         guardian.attack4(dragon);
         dragon.attack1(guardian);
-        
+
 //        Archer;        Guardian;  (Tank)
 //        Healer;        Paladin;   (Tank)
 //        Warrior;       Gladiator; (Medium)

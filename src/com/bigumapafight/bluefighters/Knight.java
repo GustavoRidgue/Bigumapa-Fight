@@ -12,8 +12,8 @@ public class Knight extends BlueFighter {
     public void setSkills() {
         this.setCategory("Knight");
 
-        this.setHp(4000);
-        this.setElixir(6000);
+        this.setHp(5000);
+        this.setElixir(6500);
 
         this.setCommonAttack(150);
         this.setCommonAttackElixir(100);

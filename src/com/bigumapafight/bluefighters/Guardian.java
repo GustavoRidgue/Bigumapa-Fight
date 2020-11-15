@@ -15,17 +15,17 @@ public class Guardian extends BlueFighter {
         this.setHp(8000);
         this.setElixir(5000);
 
-        this.setCommonAttack(200);
-        this.setCommonAttackElixir(200);
+        this.setCommonAttack(150);
+        this.setCommonAttackElixir(150);
 
-        this.setMediumAttack(400);
-        this.setMediumAttackElixir(400);
+        this.setMediumAttack(350);
+        this.setMediumAttackElixir(350);
 
-        this.setSuperAttack(600);
-        this.setSuperAttackElixir(600);
+        this.setSuperAttack(550);
+        this.setSuperAttackElixir(550);
 
-        this.setLegendaryAttack(800);
-        this.setLegendaryAttackElixir(800);
+        this.setLegendaryAttack(750);
+        this.setLegendaryAttackElixir(750);
     }
 
     public void specialCureHp300(Fighter fighter, Fighter fighter2) {
