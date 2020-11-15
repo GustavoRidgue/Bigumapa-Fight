@@ -27,7 +27,7 @@ public class Thief extends RedFighter {
         this.setLegendaryAttackElixir(800);
     }
 
-    public void specialMegaAttack(Fighter targetFighter) {
+    public void specialStealLife(Fighter targetFighter) {
         if (this.verifyCombat() && targetFighter.verifyCombat()) {
             this.setElixir(this.getElixir() - this.getLegendaryAttackElixir());
 

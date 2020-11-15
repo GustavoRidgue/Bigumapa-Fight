@@ -232,7 +232,7 @@ public abstract class Fighter {
             this.hp += hpAmount;
 
             System.out.println("New statistics: \n" +
-                    "Name: " + this.name + " | HP: " + this.hp + " | Elixir: " + this.elixir +
+                    "Name: " + this.name + " | HP: " + this.hp + " | Elixir: " + this.elixir + " (lost " + hpAmount + " elixir)" +
                     "\n--------------------\n");
         }
     }
