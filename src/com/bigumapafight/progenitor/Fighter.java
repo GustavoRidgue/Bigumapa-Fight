@@ -258,6 +258,63 @@ public abstract class Fighter {
                     "\n--------------------\n");
         }
     }
+    public void revive(Fighter teamFighter) {
+        if (this.verifyCombat()) {
+            System.out.println(
+                    "\n---------- " + this.getName().toUpperCase() + " will try to revive " + teamFighter.getName().toUpperCase() + " ----------"
+            );
+
+            System.out.println(
+                    "\nOld status: \n" +
+                    this.getName() + "= HP: " + this.getHp() + " | Elixir: " + this.getElixir() + "\n" +
+                    teamFighter.getName() + "= HP: " + teamFighter.getHp() + " | Elixir: " + teamFighter.getElixir());
+
+            if (teamFighter.getHp() <= 0 && teamFighter.getElixir() > 0) {
+                this.setElixir(this.getElixir() - 3500);
+
+                if (this.verifyCombat()) {
+                    teamFighter.setHp(teamFighter.getHp() + 2500);
+
+                    System.out.println(
+                            "\nNew Status: \n" +
+                            this.getName() + "= HP: " + this.getHp() + " | Elixir: " + this.getElixir() + " (lost 3500 elixir)\n" +
+                            teamFighter.getName() + "= HP: " + teamFighter.getHp() + " | Elixir: " + teamFighter.getElixir() + " (received 2500 hp)" +
+                            "\n---------- FIGHT ENDED! ----------\n");
+                } else {
+                    System.out.println(this.getName() + " you lose!!! your elixir is over!");
+                    System.out.println("\n---------- FIGHT ENDED! ----------\n");
+                }
+            }
+            else if (teamFighter.getElixir() <= 0 && teamFighter.getHp() > 0) {
+                this.setElixir(this.getElixir() - 3500);
+
+                if (this.verifyCombat()) {
+                    teamFighter.setElixir(teamFighter.getElixir() + 2500);
+
+                    System.out.println(
+                            "\nNew Status: \n" +
+                            this.getName() + "= HP: " + this.getHp() + " | Elixir: " + this.getElixir() + " (lost 3500 elixir)\n" +
+                            teamFighter.getName() + "= HP: " + teamFighter.getHp() + " | Elixir: " + teamFighter.getElixir() + " (received 2500 hp)" +
+                            "\n---------- FIGHT ENDED! ----------\n");
+                } else {
+                    this.status();
+                    System.out.println(this.getName() + " you lose!!! your elixir is over!");
+                    System.out.println("\n---------- FIGHT ENDED! ----------\n");
+                }
+            }
+            else {
+                System.out.println(this.getName() + " you lose!!! your elixir is over!");
+                System.out.println("\n---------- FIGHT ENDED! ----------\n");
+            }
+        } else {
+            System.out.println(
+                    this.getName() + " can't revive " + teamFighter.getName() +
+                    " because " + this.getName() + "'s elixir or hp is over\n" +
+                    "Your HP: " + this.getHp() + " | your elixir: " + this.getElixir()
+            );
+            System.out.println("\n---------- FIGHT ENDED! ----------\n");
+        }
+    }
 
 
     public String getName() {
